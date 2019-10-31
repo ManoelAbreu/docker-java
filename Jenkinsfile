@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                javac Hello.java
+                sh 'javac Hello.java'
             }
         }
        
