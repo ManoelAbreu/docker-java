@@ -23,7 +23,7 @@ pipeline {
                     def result = logz.find { it.contains('mundasdsado') };
 
                     if (!result) {
-                            error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result);
+                            error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + logz);
 
                     }
                 }
