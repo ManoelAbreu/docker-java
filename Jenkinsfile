@@ -16,16 +16,17 @@ pipeline {
         }
         stage('Results') {
             steps {
-                
-                def logz = currentBuild.rawBuild.getLog(10000);
-                
-                def result = logz.find { it.contains('Ola Words') };
-                
-                if (result) {
-                        error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result);
-                            
+                script {
+
+                    def logz = currentBuild.rawBuild.getLog(10000);
+
+                    def result = logz.find { it.contains('Ola Words') };
+
+                    if (result) {
+                            error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result);
+
+                    }
                 }
-            
             }
         }
        
