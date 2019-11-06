@@ -19,10 +19,10 @@ pipeline {
                 
                 def logz = currentBuild.rawBuild.getLog(10000);
                 
-                def result = logz.find { it.contains('Ola Words') }
+                def result = logz.find { it.contains('Ola Words') };
                 
                 if (result) {
-                        error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result)
+                        error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result);
                             
                 }
             
