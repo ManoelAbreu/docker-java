@@ -22,7 +22,7 @@ pipeline {
 
                     def result = logz.find { it.contains('mundo') };
 
-                    if (result) {
+                    if (!result) {
                             error ('Falha resultado diferente do esperado ( Ola Mundo ) ' + result);
 
                     }
